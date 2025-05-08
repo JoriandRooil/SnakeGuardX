@@ -29,7 +29,7 @@ curl -sSL https://get.docker.com | sh
 
 1. Скопируйте проект на ваш сервер:
 ```bash
-git clone https://github.com/JoriandRooil/Snake
+git clone https://github.com/JoriandRooil/SnakeGuardX
 ```
 
 2. Перейдите в директорию проекта:
