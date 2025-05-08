@@ -52,3 +52,12 @@ WG_DEFAULT_DNS=94.140.14.14 # DNS сервер
 ```bash
 docker compose up -d
 ```
+
+## Обновление проекта
+```bash
+cd SnakeGuardX
+docker compose down
+docker pull joriandro/snakex:latest
+docker compose up -d
+```
+
