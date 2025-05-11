@@ -13,7 +13,7 @@ services:
       - /opt/snakeguard:/etc/wireguard
     ports:
       - "${WG_PORT}:${WG_PORT}/udp"
-      - "${PORT}:${PORT}/tcp"
+      - "${LOCALHOST}:${PORT}:${PORT}"
     restart: unless-stopped
     cap_add:
       - NET_ADMIN
@@ -23,3 +23,9 @@ services:
       - net.ipv4.conf.all.src_valid_mark=1
     devices:
     - /dev/net/tun:/dev/net/tun
+
+  snakeguardbot:
+    env_file:
+      - .env
+    image: joriandro/snakexbot
+    container_name: snakeguardbot
